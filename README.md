@@ -4,10 +4,10 @@
 Easy6502 by Nick Morgan is one-stop accessible tutorial on 6502 assembly language programming,
 including a series of worked example programs which you can edit and run in the embedded emulator.
 
-See http://b-rich.github.io/easy6502/ for the live site.
+See https://onehotbuy.000webhostapp.com/easy6502 for the live site.
 
 This (original) fork is now in a strict maintenance-only mode. Pull requests are welcome for bug fixes.
 
 Please see other active forks for further refinements and developments of the tutorial and the emulator:
-https://github.com/b-rich./easy6502/network
+https://github.com/Mystery-College-of-The-Adapts/easy6502/network
 
