@@ -2,8 +2,8 @@
  *  6502 assembler and simulator in Javascript
  *  (C)2006-2010 Stian Soreng - www.6502asm.com
  *
- *  Adapted by Nick Morgan
- *  https://github.com/skilldrick/6502js
+ *  Adapted by Nick Morgan & B'Random Riq
+ *  https://github.com/Mystery-College-of-The-Adapts/502js
  *
  *  Released under the GNU General Public License
  *  see http://gnu.org/licenses/gpl.html
@@ -998,6 +998,48 @@ function SimulatorWidget(node) {
         memory.storeByte(addr, value);
         ROR(value);
       },
+995
+        setCarryFlagFromBit0(value);
+996
+        value = value >> 1;
+997
+        if (sf) { value |= 0x80; }
+998
+        memory.storeByte(addr, value);
+999
+        ROR(value);
+1000
+      },
+1001
+​
+1002
+      i78: function () {
+1003
+        regP |= 0x04;
+1004
+        throw new Error("Interrupts not implemented");
+1005
+        //SEI
+1006
+      },
+1007
+​
+1008
+      i79: function () {
+1009
+        var addr = popWord();
+1010
+        var value = memory.get(addr + regY);
+1011
+        testADC(value);
+1012
+        //ADC
+1013
+      },
+1014
+​
+1015
+      i7d: function () {
 
       i78: function () {
         regP |= 0x04;
